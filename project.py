@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 
 # === Clés API ===
 ETHERSCAN_API_KEY = "VZFDUWB3YGQ1YCDKTCU1D6DDSS"
-SOLANAFM_API_KEY = ""
+SOLANA_API_KEY = os.getenv("SOLANA_API_KEY")
 
 class WalletTracker:
     def __init__(self, eth_api_key=None, sol_api_key=None):
@@ -159,4 +159,5 @@ if __name__ == "__main__":
             tracker.display_btc_big_transactions(txs, min_btc=1)
 
         print("\nAttente 30 secondes...")
+
         time.sleep(30)
